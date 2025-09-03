@@ -1,6 +1,3 @@
-Here’s the full **GitHub-ready README.md** file in proper Markdown. You can drop this straight into your repo root as `README.md`:
-
-````markdown
 # 🌌 Symbolic Gravity Simulator (SG-Sim v2.2)
 
 A Python simulator for **Symbolic Gravity**, where attraction emerges not from mass-energy but from recursive **Ψ_eff fields** and entropy-translation dynamics.  
