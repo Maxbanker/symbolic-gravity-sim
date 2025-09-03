@@ -1,0 +1,7 @@
+# Core dependencies
+numpy>=1.22
+matplotlib>=3.5
+
+# Optional: for accelerated math / experiments
+jax>=0.4.0
+jaxlib>=0.4.0
