@@ -136,8 +136,3 @@ Egu Technologies
 [admin@egutechnologies.com](mailto:admin@egutechnologies.com)
 
 ```
-
----
-
-Do you also want me to prepare a **minimal `requirements.txt`** so the GitHub instructions are fully reproducible?
-```
