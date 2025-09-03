@@ -142,5 +142,4 @@ For the full theoretical background and archived releases, see the
 
 (The Zenodo community also links to the full Leanpub bookstore for extended reading.)
 
-
 ```
