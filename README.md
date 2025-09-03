@@ -71,7 +71,7 @@ This simulator operationalizes **Symbolic Gravity v2.1**:
 - **Hyperverse v6.0** — Collapse as translation-gate continuum  
 
 For theory details, see:  
-`/docs/Symbolic_Gravity_v2.txt`
+`/core/Gravity_Explainer.txt`
 
 ---
 
