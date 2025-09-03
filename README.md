@@ -91,4 +91,4 @@ For theory details, see:
 ## 👤 Author
 **Steven Lanier-Egu**  
 Egu Technologies  
-info@egutech.io
+admin@egutechnologies.com
