@@ -135,4 +135,12 @@ For theory details, see:
 Egu Technologies
 [admin@egutechnologies.com](mailto:admin@egutechnologies.com)
 
+---
+## 📚 Further Reading
+For the full theoretical background and archived releases, see the  
+👉 [Symbolic Recursion Community on Zenodo](https://zenodo.org/communities/symbolic-recursion/)  
+
+(The Zenodo community also links to the full Leanpub bookstore for extended reading.)
+
+
 ```
