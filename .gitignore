@@ -1,0 +1,14 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+
+# Outputs
+runs/
+
+# Misc
+.DS_Store
+Thumbs.db
