@@ -2,7 +2,9 @@
 
 A Python simulator for **Symbolic Gravity**, where attraction emerges from recursive **Ψ_eff fields** and entropy-translation dynamics. Built on frameworks: **ERF v3.0**, **SFT v4.0**, **FCWF v2.0**, **OFT v3.0**, and **Hyperverse v6.0**.
 
-![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-blue.svg)  
+## 📜 License
+- **Code**: [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0) — Permissive license for software, including patent grants and compatibility with commercial use. See `LICENSE` file.
+- **Documentation**: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — Attribution required for reuse of this README, explanatory content, and related documents.  
 ![Zenodo](https://zenodo.org/badge/DOI/10.5281/zenodo.16989695.svg)
 
 ---
