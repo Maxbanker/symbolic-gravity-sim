@@ -4,7 +4,7 @@ version = "2.2.0"
 description = "Simulation toolkit for symbolic gravity and entropy-recursive agents"
 readme = "README.md"
 requires-python = ">=3.9"
-license = "CC-BY-4.0"  # Correct SPDX identifier
+license = "Apache-2.0"  # Updated to Apache-2.0 for code
 authors = [
     {name = "Steven Lanier-Egu", email = "admin@egutechnologies.com"}
 ]
@@ -36,4 +36,4 @@ target-version = ['py39']
 [tool.ruff]
 line-length = 88
 select = ["E", "F", "W", "I", "B", "UP"]
-ignore = ["E501"]  # Let black handle line length
+ignore = ["E501"]
