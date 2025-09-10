@@ -1,15 +1,15 @@
-# symbolic_collapse_sim.py  (root)
+# symbolic_gravity_sim/symbolic_collapse_sim.py
 from __future__ import annotations
-import argparse, json, os
+import argparse
+import json
+import os
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.collections import LineCollection
-
-from core.psi_eff import compute_psi_eff
-from core.entropy_field import generate_entropy_field
-from core.metrics import curvature
-from core.agents import AgentConfig, SymbolicAgent
-
+from .core.psi_eff import compute_psi_eff
+from .core.entropy_field import generate_entropy_field
+from .core.metrics import curvature
+from .core.agents import AgentConfig, SymbolicAgent
 
 def _sample_starts(psi, curv, n, rng, q_psi=0.60, q_curv_max=0.75, min_dist=8.0):
     H, W = psi.shape
@@ -30,7 +30,6 @@ def _sample_starts(psi, curv, n, rng, q_psi=0.60, q_curv_max=0.75, min_dist=8.0)
     while len(picks) < n:
         picks.append((rng.uniform(0, H-1), rng.uniform(0, W-1)))
     return [(x, y) for (y, x) in picks]
-
 
 def run(seed=42, n_agents=4, steps=300, field="hillvalley", height=120, width=160,
         orbit_bias=0.55, collapse_q=0.15, curvature_q=0.92, curv_consecutive=4,
@@ -134,51 +133,3 @@ def run(seed=42, n_agents=4, steps=300, field="hillvalley", height=120, width=16
     if not no_show:
         plt.show()
     plt.close(fig)
-
-
-def parse_args():
-    p = argparse.ArgumentParser(description="Symbolic Collapse Simulator (improved)")
-    p.add_argument("--seed", type=int, default=42)
-    p.add_argument("--agents", type=int, default=4)
-    p.add_argument("--steps", type=int, default=300)
-    p.add_argument("--field", type=str, default="hillvalley",
-                   choices=["hillvalley", "gaussian", "uniform", "gradient"])
-    p.add_argument("--height", type=int, default=120)
-    p.add_argument("--width", type=int, default=160)
-
-    p.add_argument("--orbit_bias", type=float, default=0.55)
-    p.add_argument("--collapse_q", type=float, default=0.15)
-    p.add_argument("--curvature_q", type=float, default=0.92)
-    p.add_argument("--curv_consecutive", type=int, default=4)
-    p.add_argument("--curv_hysteresis", type=float, default=0.85)
-    p.add_argument("--stagnation_tol", type=float, default=0.25)
-    p.add_argument("--stagnation_std", type=float, default=0.05)
-    p.add_argument("--stagnation_window", type=int, default=12)
-    p.add_argument("--max_age", type=int, default=10000)
-
-    p.add_argument("--psi_p1", type=float, default=1.0)
-    p.add_argument("--psi_p99", type=float, default=99.0)
-
-    p.add_argument("--start_qpsi", type=float, default=0.60)
-    p.add_argument("--start_qcurv", type=float, default=0.75)
-    p.add_argument("--start_min_dist", type=float, default=10.0)
-
-    p.add_argument("--save", type=str, default=None)
-    p.add_argument("--no-show", dest="no_show", action="store_true")
-    p.add_argument("--overlay_curvature", action="store_true")
-    p.add_argument("--overlay_alpha", type=float, default=0.25)
-    return p.parse_args()
-
-
-if __name__ == "__main__":
-    args = parse_args()
-    run(seed=args.seed, n_agents=args.agents, steps=args.steps, field=args.field,
-        height=args.height, width=args.width, orbit_bias=args.orbit_bias,
-        collapse_q=args.collapse_q, curvature_q=args.curvature_q,
-        curv_consecutive=args.curv_consecutive, curv_hysteresis=args.curv_hysteresis,
-        stagnation_tol=args.stagnation_tol, stagnation_std=args.stagnation_std,
-        stagnation_window=args.stagnation_window, max_age=args.max_age,
-        psi_p1=args.psi_p1, psi_p99=args.psi_p99, start_qpsi=args.start_qpsi,
-        start_qcurv=args.start_qcurv, start_min_dist=args.start_min_dist,
-        save=args.save, no_show=args.no_show, overlay_curvature=args.overlay_curvature,
-        overlay_alpha=args.overlay_alpha)

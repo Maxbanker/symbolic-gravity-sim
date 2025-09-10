@@ -1,0 +1,39 @@
+[project]
+name = "symbolic-gravity-sim"
+version = "2.2.0"
+description = "Simulation toolkit for symbolic gravity and entropy-recursive agents"
+readme = "README.md"
+requires-python = ">=3.9"
+license = "CC-BY-4.0"  # Correct SPDX identifier
+authors = [
+    {name = "Steven Lanier-Egu", email = "admin@egutechnologies.com"}
+]
+dependencies = [
+    "numpy>=2.0",
+    "matplotlib>=3.8",
+    "pyyaml>=6.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "hypothesis>=6.0",
+    "mypy>=1.0",
+    "ruff>=0.1",
+    "black>=22.0",
+    "pre-commit>=3.0",
+    "numba>=0.57",
+    "streamlit>=1.20"
+]
+
+[project.scripts]
+sg-sim = "symbolic_gravity_sim.cli:main"
+
+[tool.black]
+line-length = 88
+target-version = ['py39']
+
+[tool.ruff]
+line-length = 88
+select = ["E", "F", "W", "I", "B", "UP"]
+ignore = ["E501"]  # Let black handle line length
